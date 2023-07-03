@@ -1,0 +1,12 @@
+  <view class="account-info" >
+    <image class="bg-image" mode="scaleToFill" src="/image/bg1.jpg"></image>
+    <view class="title"><text>账号信息</text></view>
+    <text class="username">账 号：{{username}}</text>
+    <view class="password">
+      <text class="password-text" wx:if="{{showPassword}}">密 码：{{password}}</text>
+      <text class="password-mask" wx:else>密  码：******</text>
+    </view>
+    <view class="password-toggle">
+      <switch class="toggle-switch" bindchange="togglePassword"></switch>
+    </view>
+  </view>
