@@ -1,0 +1,21 @@
+Page({
+  data:{},
+  jumpPage1:function(){
+    wx.navigateTo({
+      url: '../message/message',
+    })
+  },
+  jumpPage2:function(){
+    wx.navigateTo({
+      url: '../photocheck/photocheck',
+    })
+  },
+  jumpPage3:function(){
+    wx.navigateTo({
+      url: '../summary/summary',
+    })
+  }
+})
+wx.setNavigationBarTitle({
+	title: "查寝小程序"
+})
