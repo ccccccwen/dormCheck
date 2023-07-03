@@ -1,8 +1,0 @@
-/* pages/update/update.wxss */
-.title{
-  font-size: 30px;
-}
-.button{
-  position: absolute;
-  bottom: 180px;
-}
