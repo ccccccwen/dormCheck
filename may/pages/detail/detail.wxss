@@ -1,17 +1,14 @@
 /* pages/detail/detail.wxss */
 .bg-image{
-  width: 750rpx;
-  z-index: -1;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 .title{
   text-align: center;
   margin-bottom: 20px;
   font-size: 25px;
-  position: absolute;
-  left: 0;
-  top: 150px;
-  right: 0;
-  bottom: 0;
 }
 .account-info{
   text-align: center;
@@ -19,35 +16,14 @@
 }
 .toggle-label{
   margin-left: 60%;
-  position: absolute;
-  left: 0;
-  top: 180px;
-  right: 0;
-  bottom: 0;
 }
 .username{
   font-size: 20px;
-  position: absolute;
-  left: 0;
-  top: 200px;
-  right: 0;
-  bottom: 0;
 }
 .password{
-  position: absolute;
   font-size: 20px;
-  left: 0;
-  top: 240px;
-  right: 0;
-  bottom: 0;
 }
-.toggle-switch{
-  position: absolute;
-  margin-left: 70%;
+.eye{
   width: 24px;
   height: 24px;
-  left: 0;
-  top: 240px;
-  right: 0;
-  bottom: 0;
 }

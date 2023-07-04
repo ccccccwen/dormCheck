@@ -1,12 +1,15 @@
   <view class="container account-info" >
-    <image class="bg-image" mode="scaleToFill" src="/image/bg1.jpg"></image>
-    <view class="title"><text>账号信息</text></view>
-    <text class="username">账 号：{{username}}</text>
-    <view class="password">
-      <text class="password-text" wx:if="{{showPassword}}">密 码：{{password}}</text>
-      <text class="password-mask" wx:else>密  码：******</text>
+  <text class="title">个人信息</text>
+    <image class="bg-image" src="/image/toux.jpg"></image>
+    <view class="weui-cell username">
+      <label>账 号：</label>
+      <text class="username">{{username}}</text>
     </view>
-    <view class="password-toggle">
-      <switch class="toggle-switch" bindchange="togglePassword"></switch>
+    <view class="weui-cell password">
+    <label>密 码：</label>
+      <text class="password-text" wx:if="{{show_pass}}">{{password}}</text>
+      <text class="password-mask" wx:else>******</text>
+      <image src="/image/eye.png" bindtap="seeTap" wx:if="{{show_pass}}" style="width: 40px;height: 35px;"></image>
+      <image src="/image/nosee.png" bindtap="seeTap" wx:else style="width: 40px;height: 35px;"></image>
     </view>
   </view>

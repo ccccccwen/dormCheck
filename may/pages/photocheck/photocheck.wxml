@@ -1,23 +1,33 @@
 <!--pages/photocheck/photocheck.wxml-->
-<view class="index_page">
-    <label style="font-size: 18px;">学院名称：</label>
+<form class="weui-form" bindsubmit="formSubmit" bindreset="formReset">
+  <view class="index_page">
+    <view class="weui-cell">
+    <label style="font-size: 22px;">学院：</label>
   <picker bindchange="bindFirstPickerChange" value="{{firstPickerIndex}}" range="{{firstPickerOptions}}">
     <view class="picker">
-      {{firstPickerOptions[firstPickerIndex]}}
+      {{firstPickerOptions[firstPickerIndex] || "-请选择-"}}
     </view>
   </picker>
-    <label style="font-size: 18px;">班级名称：</label>
+  </view>
+  <view class="weui-cell">
+    <label style="font-size: 22px;">班级：</label>
   <picker bindchange="bindSecondPickerChange" value="{{secondPickerIndex}}" range="{{secondPickerOptions}}">
     <view class="picker">
-      {{secondPickerOptions[secondPickerIndex]}}
+      {{secondPickerOptions[secondPickerIndex] || "-请选择-"}}
     </view>
   </picker>
-  <label style="font-size: 18px;">学生姓名：</label>
-  <input placeholder="请输入学生姓名" />
-  <label style="font-size: 18px;">寝室成员照：</label>
-      <button class="photo" bindtap="takePhoto" style="border-radius:20px;width: 90px;color: white;"><image src="/image/photo.png" style="width:30px;height: 30px;" /></button>
-      <image src="{{tempfilepath }}" mode="aspecFill" style="margin-left:25%;height: 180px;width: 180px;margin-bottom: 40px;"/>
+  </view>
+  <view class="weui-cell">
+    <label style="font-size: 22px;">姓名：</label>
+    <input placeholder="请输入学生姓名" />
+  </view>
+  <view class="weui-cell">
+    <label style="font-size: 22px;">拍照查寝：</label>
+      <button class="photo" bindtap="takePhoto" style="border-radius:20px;width: 80px;color: white;"><image src="/image/photo.png" style="width:30px;height: 30px;" /></button>
+      <image src="{{tempfilepath }}" mode="aspecFill" style="height: 180px;width: 180px;margin-bottom: 40px;"/>
+  </view>
     <view>
       <button type="primary" form-type="submit">提交</button>
     </view>
   </view>
+</form>

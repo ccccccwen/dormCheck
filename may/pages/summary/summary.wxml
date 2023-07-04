@@ -1,21 +1,26 @@
 <view class="title">查寝情况</view>
-<label style="font-size: 18px;">学院名称：</label>
+<view class="index_page">
+  <view class="weui-cell">
+<label style="font-size: 18px;">学院：</label>
   <picker bindchange="bindFirstPickerChange" value="{{firstPickerIndex}}" range="{{firstPickerOptions}}">
     <view class="picker">
-      {{firstPickerOptions[firstPickerIndex]}}
+      {{firstPickerOptions[firstPickerIndex] || "-请选择-"}}
     </view>
   </picker>
-    <label style="font-size: 18px;">班级名称：</label>
+  </view>
+  <view class="weui-cell">
+    <label style="font-size: 18px;">班级：</label>
   <picker bindchange="bindSecondPickerChange" value="{{secondPickerIndex}}" range="{{secondPickerOptions}}">
     <view class="picker">
-      {{secondPickerOptions[secondPickerIndex]}}
+      {{secondPickerOptions[secondPickerIndex] || "-请选择-"}}
     </view>
   </picker>
+  </view>
 <view class="table">
     <scroll-view class="tableX" >
         <view class="tr">
             <view class="th1">序号</view>
-            <view class="th">学生姓名</view>
+            <view class="th">姓名</view>
             <view class="th">宿舍号</view>
             <view class="th">备注</view>
         </view>
@@ -27,5 +32,6 @@
                 <view class="td">内容</view>
             </view>
         </scroll-view>
-    </scroll-view>
+      </scroll-view>
+  </view>
 </view>

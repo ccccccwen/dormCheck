@@ -5,11 +5,22 @@ Page({
    * 页面的初始数据
    */
     data: {
-      firstPickerOptions: ["计科院", "医学院", "教育学院","机电院"],
+      firstPickerOptions: ["-请选择-","计科院", "医学院", "教育学院","机电院"],
       secondPickerOptions: [],
       isUpload:false,
       imageFile:"",
       serverImageFile:"",
+      formData: {
+        studentName: ''
+      }
+    },
+
+    formSubmit: function (e) {
+      var formData = e.detail.value;
+      console.log('form data:', formData);
+      this.setData({
+        'formData.studentName': ''
+      });
     },
   
     bindFirstPickerChange: function (e) {
@@ -36,16 +47,16 @@ Page({
       // 根据不同的选项来设置第二个选择框的选项数组
       switch (firstPickerIndex) {
         case "0":
-          options = ["选项A", "选项B", "选项C"];
+          options = ["-请选择-","选项A", "选项B", "选项C"];
           break;
         case "1":
-          options = ["选项X", "选项Y", "选项Z"];
+          options = ["-请选择-","选项X", "选项Y", "选项Z"];
           break;
         case "2":
-          options = ["选项①", "选项②", "选项③"];
+          options = ["-请选择-","选项①", "选项②", "选项③"];
           break;
         case "3":
-          options = ["选项aaa", "选项bbb", "选项ccc"];
+          options = ["-请选择-","选项aaa", "选项bbb", "选项ccc"];
           break;
       }
       return options;

@@ -5,14 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    showPassword: false,
+    show_pass: false,
     username:"admin",
     password: '123456', 
   },
-  togglePassword: function (event) {
-    this.setData({
-      showPassword: event.detail.value,
-    });
+  seeTap:function(){
+    var that=this;
+    that.setData({
+      // 切换图标
+      show_pass:!that.data.show_pass,
+      // 切换表单type属性
+      inputType:that.data.inputType==='password'?'text':'password',
+    })
   },
   /**
    * 生命周期函数--监听页面加载
