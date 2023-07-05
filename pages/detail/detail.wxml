@@ -1,0 +1,14 @@
+  <view class="container account-info" >
+    <image class="bg-image" src="/image/toux.jpg"></image>
+    <view class="weui-cell username">
+      <label>账 号：</label>
+      <text class="username">{{username}}</text>
+    </view>
+    <view class="weui-cell password">
+    <label>密 码：</label>
+      <text class="password-text" wx:if="{{show_pass}}">{{password}}</text>
+      <text class="password-mask" wx:else>******</text>
+      <image src="/image/eye.png" bindtap="seeTap" wx:if="{{show_pass}}" style="width: 40px;height: 35px;"></image>
+      <image src="/image/nosee.png" bindtap="seeTap" wx:else style="width: 40px;height: 35px;"></image>
+    </view>
+  </view>

@@ -1,0 +1,36 @@
+<view class="index_page">
+  <view class="weui-cell">
+<label style="font-size: 18px;">学院：</label>
+  <picker bindchange="bindFirstPickerChange" value="{{firstPickerIndex}}" range="{{firstPickerOptions}}">
+    <view class="picker">
+      {{firstPickerOptions[firstPickerIndex] || "-请选择-"}}
+    </view>
+  </picker>
+  </view>
+  <view class="weui-cell">
+    <label style="font-size: 18px;">班级：</label>
+  <picker bindchange="bindSecondPickerChange" value="{{secondPickerIndex}}" range="{{secondPickerOptions}}">
+    <view class="picker">
+      {{secondPickerOptions[secondPickerIndex] || "-请选择-"}}
+    </view>
+  </picker>
+  </view>
+<view class="table">
+    <scroll-view class="tableX" >
+        <view class="tr">
+            <view class="th1">序号</view>
+            <view class="th">姓名</view>
+            <view class="th">宿舍号</view>
+            <view class="th">备注</view>
+        </view>
+        <scroll-view class="tableY" scroll-y style="height: 900rpx;">
+            <view class="tr" wx:for="{{11}}" wx:key="index">
+                <view class="td1">{{index+1}}</view>
+                <view class="td">内容</view>
+                <view class="td">内容</view>
+                <view class="td">内容</view>
+            </view>
+        </scroll-view>
+      </scroll-view>
+  </view>
+</view>
