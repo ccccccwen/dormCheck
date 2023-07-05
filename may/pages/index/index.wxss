@@ -1,0 +1,11 @@
+/**index.wxss**/
+button{
+    height: 60px;
+    width: 100% ;
+    color: white;
+    margin-top: 30rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
