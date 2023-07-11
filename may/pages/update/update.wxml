@@ -1,6 +1,0 @@
-<!--pages/update/update.wxml-->
-<view class="container">
-  <text class="title">版本更新</text>
-  <view>当前版本 1.0.0</view>
-  <button type="primary" class="button">更新</button>
-</view>
